@@ -96,7 +96,7 @@ const CartPage = () => {
         userId: JSON.parse(localStorage.getItem("auth"))._id,
       };
       // console.log(newObject);
-      const REACT_APP_SERVER_URL= "http://localhost:8080";
+      const REACT_APP_SERVER_URL= "https://billing-server-6caq.onrender.com";
       await axios.post(
         `${REACT_APP_SERVER_URL}/api/bills/add-bills`,
         newObject
