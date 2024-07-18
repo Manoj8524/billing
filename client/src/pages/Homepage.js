@@ -57,7 +57,7 @@ const Homepage = () => {
         dispatch({
           type: "SHOW_LOADING",
         });
-        const REACT_APP_SERVER_URL= "http://localhost:8080";
+        const REACT_APP_SERVER_URL= "https://billing-server-6caq.onrender.com";
         const { data } = await axios.get(
           `${REACT_APP_SERVER_URL}/api/items/get-item`
         );
