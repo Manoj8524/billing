@@ -15,7 +15,7 @@ const app = express();
 
 //middlwares
 const corsOptions = {
-  origin: "*",
+  origin: "https://jeevan-billing-software.onrender.com/",
   methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
   optionsSuccessStatus: 204,
 };
