@@ -14,9 +14,9 @@ const Login = () => {
       dispatch({
         type: "SHOW_LOADING",
       });
-      const REACT_APP_SERVER_URL= "https://billing-server-6caq.onrender.com";
+      // const REACT_APP_SERVER_URL= "https://billing-server-6caq.onrender.com";
       const res = await axios.post(
-        `${REACT_APP_SERVER_URL}/api/users/login`,
+        `https://billing-server-6caq.onrender.com/api/users/login`,
         value
       );
       dispatch({ type: "HIDE_LOADING" });
