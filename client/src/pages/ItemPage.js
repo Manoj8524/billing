@@ -17,7 +17,7 @@ const ItemPage = () => {
       dispatch({
         type: "SHOW_LOADING",
       });
-      const REACT_APP_SERVER_URL= "http://localhost:8080";
+      const REACT_APP_SERVER_URL= "https://billing-server-6caq.onrender.com";
       const { data } = await axios.get(
         `${REACT_APP_SERVER_URL}/api/items/get-item`
       );
@@ -41,7 +41,7 @@ const ItemPage = () => {
       dispatch({
         type: "SHOW_LOADING",
       });
-      const REACT_APP_SERVER_URL= "http://localhost:8080";
+      const REACT_APP_SERVER_URL= "https://billing-server-6caq.onrender.com";
       await axios.post(
         `${REACT_APP_SERVER_URL}/api/items/delete-item`,
         { itemId: record._id }
@@ -100,7 +100,7 @@ const ItemPage = () => {
         dispatch({
           type: "SHOW_LOADING",
         });
-        const REACT_APP_SERVER_URL= "http://localhost:8080";
+        const REACT_APP_SERVER_URL= "https://billing-server-6caq.onrender.com";
         const res = await axios.post(
           `${REACT_APP_SERVER_URL}/api/items/add-item`,
           value
@@ -119,7 +119,7 @@ const ItemPage = () => {
         dispatch({
           type: "SHOW_LOADING",
         });
-        const REACT_APP_SERVER_URL= "http://localhost:8080";
+        const REACT_APP_SERVER_URL= "https://billing-server-6caq.onrender.com";
         await axios.put(
           `${REACT_APP_SERVER_URL}/api/items/edit-item`,
           {
