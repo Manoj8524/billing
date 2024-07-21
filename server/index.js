@@ -3,7 +3,7 @@ const morgan = require("morgan");
 const bodyParser = require("body-parser");
 const cors = require("cors");
 const dotanv = require("dotenv");
-const path = require('path')
+
 const { bgCyan } = require("colors");
 require("colors");
 const connectDb = require("./config/config");
@@ -16,13 +16,13 @@ const app = express();
 
 //middlwares
 const corsOptions = {
-  origin: "https://jeevan-billing-software.onrender.com",
+  origin: "*",
   methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
   optionsSuccessStatus: 204,
 };
 
 app.use(cors({
-  origin: ["https://jeevan-billing-software.onrender.com"],
+  origin: ["*"],
   methods: ["GET", "POST", "PUT", "DELETE"],
   credentials: true
 }));
@@ -36,9 +36,6 @@ app.use("/api/items", require("./routes/itemRoutes"));
 app.use("/api/users", require("./routes/userRoutes"));
 app.use("/api/bills", require("./routes/billsRoute"));
 
-app.use(express.static(path.join(__dirname,'client/build')));
-
-app.get('*',(req,res)=>{res.sendFile(path.join(__dirname,'client/build','index.html'));});
 
 //port
 const PORT = process.env.PORT || 8080;
