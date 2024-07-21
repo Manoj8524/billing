@@ -15,7 +15,7 @@ const app = express();
 
 //middlwares
 const corsOptions = {
-  origin: "*",
+  origin: "https://jeevan-billing-software.onrender.com",
   methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
   optionsSuccessStatus: 204,
 };
@@ -34,6 +34,10 @@ app.use(morgan("dev"));
 app.use("/api/items", require("./routes/itemRoutes"));
 app.use("/api/users", require("./routes/userRoutes"));
 app.use("/api/bills", require("./routes/billsRoute"));
+
+app.use(express.static(path.join(__dirname,'client/build')));
+
+app.get"*",(req,res)=>{res.sendFile(path.join(__dirname,'client/build','index.html));});
 
 //port
 const PORT = process.env.PORT || 8080;
