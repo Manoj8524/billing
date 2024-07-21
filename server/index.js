@@ -37,7 +37,7 @@ app.use("/api/bills", require("./routes/billsRoute"));
 
 app.use(express.static(path.join(__dirname,'client/build')));
 
-app.get"*",(req,res)=>{res.sendFile(path.join(__dirname,'client/build','index.html));});
+app.get('*',(req,res)=>{res.sendFile(path.join(__dirname,'client/build','index.html));});
 
 //port
 const PORT = process.env.PORT || 8080;
