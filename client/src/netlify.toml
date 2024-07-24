@@ -18,6 +18,6 @@ status = 404
 
 # Rewrite a path
 [[redirects]]
-from = "/pass-through"
+from = "/*"
 to = "/index.html"
 status = 200
