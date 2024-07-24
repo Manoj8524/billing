@@ -1,5 +1,13 @@
 const mongoose = require("mongoose");
 
+const getCurrentTime = () => {
+  const now = new Date();
+  const hours = String(now.getHours()).padStart(2, '0');
+  const minutes = String(now.getMinutes()).padStart(2, '0');
+ 
+  return `${hours}:${minutes}`;
+};
+
 const billSchema = mongoose.Schema(
   {
     customerName: {
@@ -34,6 +42,7 @@ const billSchema = mongoose.Schema(
       type: Date,
       default: Date.now(),
     },
+    time: { type: String, default: getCurrentTime },
     
   },
   { timestamp: true }
