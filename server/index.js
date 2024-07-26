@@ -7,6 +7,10 @@ const { bgCyan } = require("colors");
 const statsRoutes = require("./routes/statsRoutes");
 require("colors");
 const connectDb = require("./config/config");
+const corsOptions = {
+  origin: process.env.App,
+  methods: 'GET,HEAD,PUT,PATCH,POST,DELETE'
+}
 //dotenv config
 dotanv.config();
 //db config
@@ -17,11 +21,7 @@ const app = express();
 //middlwares
 
 
-app.use(cors(
-  { origin:["*"],
-    methods:["GET","POST","PUT","DELETE","PATCH","HEAD"],
-    credentials:true }
-));
+app.use(cors(corsOptions));
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
