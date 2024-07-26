@@ -8,7 +8,7 @@ const statsRoutes = require("./routes/statsRoutes");
 require("colors");
 const connectDb = require("./config/config");
 const corsOptions = {
-  origin: process.env.App,
+  origin: "*",
   methods: 'GET,HEAD,PUT,PATCH,POST,DELETE'
 }
 //dotenv config
