@@ -8,7 +8,7 @@ const statsRoutes = require("./routes/statsRoutes");
 require("colors");
 const connectDb = require("./config/config");
 const corsOptions = {
-  origin: "*",
+  origin: "http://localhost:3000",
  methods:'GET,HEAD,PUT,PATCH,POST,DELETE'
 
 }
