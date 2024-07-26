@@ -1,0 +1,129 @@
+/* General Styles */
+body {
+  font-family: 'Lota', sans-serif;
+}
+
+.category {
+  margin-right: 10px;
+  cursor: pointer;
+  padding: 5px;
+  border-radius: 8px;
+  background-color: #1890ff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.category-active {
+  background-color: #40a9ff;
+}
+
+.d-flex {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.text-uppercase {
+  text-transform: uppercase;
+}
+
+.text-white {
+  color: white;
+}
+
+/* Responsive styles */
+
+/* Extra small devices (phones, 320px and up) */
+@media (max-width: 575.98px) {
+  .d-flex.mb-3 {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .category {
+    width: 100%;
+    margin-right: 0;
+  }
+
+  .ant-input {
+    width: 100% !important;
+    margin-bottom: 16px;
+  }
+
+  .category h4 {
+    font-size: 14px;
+    text-align: center;
+  }
+}
+
+/* Small devices (tablets, 576px and up) */
+@media (min-width: 576px) and (max-width: 767.98px) {
+  .d-flex.mb-3 {
+    justify-content: center;
+  }
+
+  .category {
+    width: 48%;
+    margin-right: 1%;
+  }
+
+  .category:nth-child(2n) {
+    margin-right: 0;
+  }
+
+  .category h4 {
+    font-size: 16px;
+    text-align: center;
+  }
+
+  .ant-input {
+    width: 100% !important;
+    margin-bottom: 16px;
+  }
+}
+
+/* Medium devices (desktops, 768px and up) */
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .d-flex.mb-3 {
+    justify-content: flex-start;
+  }
+
+  .category {
+    width: 32%;
+    margin-right: 1%;
+  }
+
+  .category:nth-child(3n) {
+    margin-right: 0;
+  }
+
+  .category h4 {
+    font-size: 18px;
+    text-align: center;
+  }
+
+  .ant-input {
+    width: 300px;
+  }
+}
+
+/* Large devices (large desktops, 992px and up) */
+@media (min-width: 992px) {
+  .d-flex.mb-3 {
+    justify-content: flex-start;
+  }
+
+  .category {
+    width: auto;
+    margin-right: 10px;
+  }
+
+  .category h4 {
+    font-size: 20px;
+  }
+
+  .ant-input {
+    width: 300px;
+  }
+}
