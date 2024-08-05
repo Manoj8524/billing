@@ -8,7 +8,7 @@ const statsRoutes = require("./routes/statsRoutes");
 require("colors");
 const connectDb = require("./config/config");
 const corsOptions = {
-  origin: "https://billingsoft-git-main-manoj8524s-projects.vercel.app/login",
+  origin: "https://billingsoft.vercel.app/login",
  methods:'GET,HEAD,PUT,PATCH,POST,DELETE'
 
 }
