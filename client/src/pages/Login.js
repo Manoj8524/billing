@@ -12,7 +12,7 @@ const Login = () => {
   const handleSubmit = async (value) => {
     try {
       dispatch({ type: "SHOW_LOADING" });
-      const REACT_APP_SERVER_URL = "https://billingserver.vercel.app";
+      const REACT_APP_SERVER_URL = "https://billingserver-manoj8524s-projects.vercel.app";
       const res = await axios.post(
         `${REACT_APP_SERVER_URL}/api/users/login`,
         value
