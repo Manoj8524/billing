@@ -18,7 +18,7 @@ const ItemPage = () => {
       dispatch({
         type: "SHOW_LOADING",
       });
-      const REACT_APP_SERVER_URL = "https://billingserver-manoj8524s-projects.vercel.app";
+      const REACT_APP_SERVER_URL = "https://billingserver.vercel.app";
       const { data } = await axios.get(`${REACT_APP_SERVER_URL}/api/items/get-item`);
       setItemsData(data);
       dispatch({ type: "HIDE_LOADING" });
@@ -57,7 +57,7 @@ const ItemPage = () => {
       dispatch({
         type: "SHOW_LOADING",
       });
-      const REACT_APP_SERVER_URL = "https://billingserver-manoj8524s-projects.vercel.app";
+      const REACT_APP_SERVER_URL = "https://billingserver.vercel.app";
       await axios.post(`${REACT_APP_SERVER_URL}/api/items/delete-item`, { itemId: record._id });
       message.success("Item Deleted Successfully");
       getAllItems();
@@ -100,7 +100,7 @@ const ItemPage = () => {
         dispatch({
           type: "SHOW_LOADING",
         });
-        const REACT_APP_SERVER_URL = "https://billingserver-manoj8524s-projects.vercel.app";
+        const REACT_APP_SERVER_URL = "https://billingserver.vercel.app";
         await axios.post(`${REACT_APP_SERVER_URL}/api/items/add-item`, value);
         message.success("Item Added Successfully");
         getAllItems();
@@ -116,7 +116,7 @@ const ItemPage = () => {
         dispatch({
           type: "SHOW_LOADING",
         });
-        const REACT_APP_SERVER_URL = "https://billingserver-manoj8524s-projects.vercel.app";
+        const REACT_APP_SERVER_URL = "https://billingserver.vercel.app";
         await axios.put(`${REACT_APP_SERVER_URL}/api/items/edit-item`, {
           ...value,
           itemId: editItem._id,
