@@ -20,7 +20,7 @@ const Homepage = () => {
     const getAllItems = async () => {
       try {
         dispatch({ type: "SHOW_LOADING" });
-        const REACT_APP_SERVER_URL = "https://billingserver.vercel.app";
+        const REACT_APP_SERVER_URL = "https://billingserver-manoj8524s-projects.vercel.app";
         const { data } = await axios.get(`${REACT_APP_SERVER_URL}/api/items/get-item`);
         setItemsData(data);
         dispatch({ type: "HIDE_LOADING" });
