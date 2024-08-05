@@ -99,7 +99,7 @@ const CartPage = () => {
         totalAmount,
         userId: JSON.parse(localStorage.getItem("auth"))._id,
       };
-      const REACT_APP_SERVER_URL = "https://billingserver-manoj8524s-projects.vercel.app";
+      const REACT_APP_SERVER_URL = "https://billingserver.vercel.app";
       await axios.post(`${REACT_APP_SERVER_URL}/api/bills/add-bills`, newObject);
       message.success("Bill Generated");
       clearCart();
