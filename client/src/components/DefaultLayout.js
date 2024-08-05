@@ -51,7 +51,7 @@ const DefaultLayout = ({ children }) => {
   useEffect(() => {
     const fetchStats = async () => {
       try {
-        const response = await fetch("https://billingserver.vercel.app//api/stats");
+        const response = await fetch("https://billingserver.vercel.app/api/stats");
         const data = await response.json();
         setStats({
           totalCustomer: data.totalCustomer,
